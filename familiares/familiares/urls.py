@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from crearfamilia.views import alta_familiar, leer_familia, datos_familiar, home, base
+from crearfamilia.views import alta_familiar, leer_familia, datos_familiar, home, base, depura
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,5 @@ urlpatterns = [
     path('alta-familiar/', alta_familiar),
     path('leer-familia/', leer_familia),
     path('buscar-familiar/<int:id_familiar>/', datos_familiar),
+    path('depurado/', depura),
 ]

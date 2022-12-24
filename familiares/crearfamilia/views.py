@@ -4,6 +4,7 @@ from django.http import HttpResponse, Http404
 from crearfamilia.models import Familiar
 # Create your views here.
 
+
 def base(request):
     return render(request, "base.html", context = {})
 
@@ -49,3 +50,8 @@ def datos_familiar(request, id_familiar):
     return render(request, 'familiar.html', {
         'familiar': familiar,
     })
+
+def depura(request):
+    familia = Familiar.objects.all().delete()
+
+    return render(request, "depurado.html", context = {})
