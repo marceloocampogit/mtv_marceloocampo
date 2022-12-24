@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from crearfamilia.views import alta_familiar, leer_familia
+from crearfamilia.views import alta_familiar, leer_familia, datos_familiar, home, base
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
+    path('/', base),
+    path('', home),
     path('alta-familiar/', alta_familiar),
-    path('leer-familia/', leer_familia)
+    path('leer-familia/', leer_familia),
+    path('buscar-familiar/<int:id_familiar>/', datos_familiar),
 ]

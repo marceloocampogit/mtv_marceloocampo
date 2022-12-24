@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div>
-    <h2>Estos son los integrantes de tu familia!</h2>
-    {% for familiar in Familia %}
-
+    <h2>Aca estoy buscando un familiar!</h2>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{familiar.name}} {{familiar.surname}}</h5>
           <p class="card-text">Edad: {{familiar.age}}</p>
           <p class="card-text">Fecha de nacimiento: {{familiar.birthday}}</p>
+          <a href="#" class="btn btn-primary">Vaya familiar!</a>
         </div>
     </div>
-    {% endfor %}
 </div>
 {% endblock content %}
